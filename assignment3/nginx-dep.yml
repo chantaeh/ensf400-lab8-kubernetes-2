@@ -1,1 +1,2 @@
-
+# The Deployment has the name nginx-dep with 5 replicas. 
+# The Deployment uses a base image nginx with the version tag 1.14.2. Expose port 8080.
