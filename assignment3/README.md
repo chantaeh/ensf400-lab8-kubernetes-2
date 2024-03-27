@@ -2,7 +2,7 @@
 
 This assignment has a full mark of 100. It takes up 5\% of your final grade. 
 
-You will use Minikube in Codespaces to deploy an nginx service an 2 backend apps.
+You will use Minikube in Codespaces to deploy an nginx service and 2 backend apps.
 
 ## Requirements
 
