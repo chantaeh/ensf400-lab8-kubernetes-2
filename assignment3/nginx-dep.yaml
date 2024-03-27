@@ -1,2 +1,24 @@
 # The Deployment has the name nginx-dep with 5 replicas. 
 # The Deployment uses a base image nginx with the version tag 1.14.2. Expose port 8080.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-dep
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+      run: my-nginx
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: nginx
+        run: my-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 8080
