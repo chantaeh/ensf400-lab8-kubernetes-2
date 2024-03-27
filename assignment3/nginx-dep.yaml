@@ -6,16 +6,16 @@ kind: Deployment
 metadata:
   name: nginx-dep
 spec:
-  selector:
-    matchLabels:
-      app: nginx
-      run: my-nginx
+  # selector:
+  #   matchLabels:
+  #     app: nginx
+  #     run: my-nginx
   replicas: 5
   template:
-    metadata:
-      labels:
-        app: nginx
-        run: my-nginx
+    # metadata:
+    #   labels:
+    #     app: nginx
+    #     run: my-nginx
     spec:
       containers:
       - name: nginx
