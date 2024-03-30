@@ -1,8 +1,20 @@
-Run:
+Run this command to start minikube:
 ```
 minikube start --nodes 3 -p ensf400
 ```
 
+First, apply the configmap:
+```
+kubectl apply -f nginx-configmap.yaml
+```
+
+Then, apply the deployment:
+```
+kubectl apply -f nginx-dep.yaml
+```
+
+TODO: test deployment, test configmap, test svc (clusterip service)
+well.. pods are not running for some reason???
 
 
 
