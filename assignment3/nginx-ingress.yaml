@@ -1,2 +1,0 @@
-# An `Ingress` config named `nginx-ingress.yaml` 
-# redirecting the requests to path `/nginx` to the backend service `nginx-svc`.
