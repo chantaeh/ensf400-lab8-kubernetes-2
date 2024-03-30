@@ -1,0 +1,14 @@
+#  exposes port `8080`, and 
+# should use label selectors to select the pods from the `Deployment` defined in the last step.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc
+spec:
+  type: ClusterIP
+  ports:
+    - targetPort: 8080
+  selector:
+    matchLabels:
+      app: nginx
