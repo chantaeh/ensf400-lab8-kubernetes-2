@@ -19,11 +19,11 @@ spec:
         - containerPort: 8080
         volumeMounts:
         - name: nginx-cfg-file
-          mountPath: /etc/nginx
+          mountPath: /etc/nginx/nginx.conf
       volumes:
       - name: nginx-cfg-file
         configMap: 
           name: nginx-configmap 
           items:
             - key: nginx.cfg
-              path: nginx.cfg
+              path: nginx.conf
