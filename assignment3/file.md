@@ -14,7 +14,13 @@ kubectl apply -f nginx-dep.yaml
 ```
 
 TODO: test deployment, test configmap, test svc (clusterip service)
-well.. pods are not running for some reason???
+well.. pods are not running for some reason??? something wrong with volume mount i think.
+
+kubectl get pods
+
+kubectl describe pod <pod-name>
+
+kubectl logs <pod-name>
 
 
 
