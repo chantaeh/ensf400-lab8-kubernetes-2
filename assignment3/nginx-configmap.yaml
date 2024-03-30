@@ -1,12 +1,16 @@
-# A ConfigMap defined in nginx-configmap.yaml, 
-# The data in the configmap has a key-value pair with the key being nginx.cfg and value being the following:
-# upstream backend {
-#     server app-1:8080;
-#     server app-2:8080;
-# }
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfigmap               
+data:
+  nginx.cfg: "upstream backend {
+                  server app-1:8080;
+                  server app-2:8080;
+              }
 
-# server {
-#     location / {
-#         proxy_pass http://backend;
-#     }
-# }
+              server {
+                  location / {
+                      proxy_pass http://backend;
+                  }
+              }"
+
